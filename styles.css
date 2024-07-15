@@ -91,14 +91,24 @@ button{
 }
 
 main img{
-    max-width: 100%;
-        height: auto;
-        margin-left: 2rem;
-        border-radius: 50%;
+    height: 25rem;
+    width: auto;
+    margin-left: 2rem;
+    border-radius: 50%;
 }
 
 #work{
     color: white;
     text-align: left;
+    padding-top: 2.375rem;
+}
+
+.logos{
+    width: 57.5rem;
+    height: 3.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 33.75rem;
     padding-top: 2.375rem;
 }
