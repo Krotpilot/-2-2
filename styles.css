@@ -7,11 +7,16 @@ body {
     margin: 0;
     padding: 0;
     background-color: black;
+    box-sizing: border-box;
+    border-color: #9C9C9C;
 }
 
 header {
     box-sizing: border-box;
-    width: 69.375rem;
+    width: 100%;
+    /* адаптируется под ширину экрана */
+    max-width: 69.375rem;
+    /* максимальная ширина */
     height: 4.375rem;
     text-align: center;
     margin-left: auto;
@@ -32,8 +37,6 @@ header a {
     padding-right: 2.1875rem;
 }
 
-
-
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -44,7 +47,7 @@ nav {
 .links {
     display: flex;
     align-items: center;
-    background-color: transparent;   
+    background-color: transparent;
 }
 
 .icons {
@@ -53,62 +56,165 @@ nav {
     background-color: transparent;
 }
 
-
-.container{
+.container {
+    box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     margin-top: 8.75rem;
-    margin-left: 11.25rem;
-    width: calc(100% - 11.25rem);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 69.375rem;
+    padding: 0 1rem;
     height: auto;
 }
 
-.descr-section{
+.descr-section {
     box-sizing: border-box;
-    margin-left: 22.5rem;
     margin-top: 4rem;
     width: 33.625rem;
     height: auto;
     text-align: start;
+    flex: 1;
 }
 
-h1{
+h1 {
     color: white;
     font-weight: bold;
     font-size: 2.75rem;
 }
 
-.descr-section p{
+.descr-section p {
     color: #9C9C9C;
     padding-bottom: 0.875rem;
 }
 
-button{
+button {
     padding: 1.3125rem 4rem;
     background-color: #3F8E00;
     color: white;
     border-radius: 0.5rem;
 }
 
-main img{
+main img {
     height: 25rem;
     width: auto;
     margin-left: 2rem;
     border-radius: 50%;
 }
 
-#work{
+#work {
     color: white;
-    text-align: left;
+    text-align: center;
     padding-top: 2.375rem;
 }
 
-.logos{
+/*.logos {
     width: 57.5rem;
     height: 3.75rem;
+    margin-left: 33.75rem;
+    padding-top: 2.375rem;
+}*/
+
+.logos {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 69.375rem;
+    height: 3.75rem;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 33.75rem;
     padding-top: 2.375rem;
+}
+
+
+/* Медиазапрос для устройств шириной до 1200px */
+@media (max-width: 1200px) {
+    header {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .descr-section {
+        margin-left: 1rem;
+    }
+
+    .logos {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+/* Медиазапрос для устройств шириной до 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .links {
+        flex-direction: column;
+    }
+
+    .links a {
+        padding: 0.5rem 0;
+    }
+
+    .icons {
+        margin-top: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 4rem;
+        width: 100%;
+    }
+
+    .descr-section {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    main img {
+        margin: 2rem auto;
+        display: block;
+        height: auto;
+        max-width: 80%;
+    }
+
+    .logos {
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* Медиазапрос для устройств шириной до 480px */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 0.5rem;
+    }
+
+    .links a {
+        padding: 0.25rem 0;
+    }
+
+    button {
+        padding: 1rem 3rem;
+    }
 }
